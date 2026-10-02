@@ -25,12 +25,12 @@ The Standards axis needs nothing. It reads whatever the repo documents (`CODING_
 
 The Spec axis needs a spec to exist and be findable. It looks in this order:
 
-1. Issue references in the commit messages (`#123`, `Closes #45`, a GitLab `!67`), fetched through `docs/agents/issue-tracker.md`.
+1. `$ISSUES_DIR/<id>/spec.md`, when the id comes from an argument or from a `feature/<id>-`, `bugfix/<id>-`, or `hotfix/<id>-` branch.
 2. A path you pass in as an argument.
-3. A spec file under `docs/`, `specs/`, or `.scratch/` matching the branch or feature name.
+3. `$ISSUES_DIR/<id>/ticket.md` for that same id.
 4. Asking you.
 
-Step 1 depends on `docs/agents/issue-tracker.md`, which [setup-matt-pocock-skills](https://aihero.dev/skills-setup-matt-pocock-skills) writes. Without it the axis still works if you hand it a path. With no spec at all, the Spec sub-agent is skipped and the report says "no spec available" rather than inventing requirements.
+With no spec at all, the Spec sub-agent is skipped and the report says "no spec available" rather than inventing requirements.
 
 ## The two axes
 

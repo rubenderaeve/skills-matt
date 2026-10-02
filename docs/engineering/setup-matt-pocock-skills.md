@@ -1,3 +1,5 @@
+> **Archived.** Removed from this fork after v1.2.3. Issue files live in `$ISSUES_DIR/<id>/`. Nothing in this set configures a tracker. The page stays up for reference.
+
 ## What it does
 
 `setup-matt-pocock-skills` answers three questions about one repo: where issues live, what the triage labels are called, and where the domain docs sit. It records the answers as markdown files under `docs/agents/`.
